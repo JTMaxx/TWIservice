@@ -1,6 +1,7 @@
-package Client.Controller;
+package Server.Controller;
 
 import Server.Model.Customer;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
-public class CustomerClient4Controller {
+public class CustomerServerController {
     private static final String template = "Customer's name is %s";
     private static final AtomicLong customerIdCounter = new AtomicLong();
 

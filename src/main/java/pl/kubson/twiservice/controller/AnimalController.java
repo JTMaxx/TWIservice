@@ -19,6 +19,9 @@ public class AnimalController {
     public Animal animal(@RequestParam(value = "animalName", defaultValue = "Animalson") String animalName) {
         return new Animal(counter.incrementAndGet(), String.format(template, animalName));
     }
+    // So, we have here object of Animal class, which is in this case a method, which returns an object of Animal type.
+    // The method animal() has 1 param - animalName. todo: Does the method create content on website localhost:8080/animal ?
+
 
     @RequestMapping("/mammal")
     public Animal mammal(@RequestParam(value = "mammalName", defaultValue = "Mammalson") String mammalName,
