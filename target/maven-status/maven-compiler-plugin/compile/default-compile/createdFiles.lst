@@ -1,0 +1,6 @@
+Server\Controller\Main.class
+Server\PersonRepository.class
+Server\Model\Animal.class
+Client\ClientJersey.class
+Server\Controller\AnimalController.class
+Server\Model\Person.class
