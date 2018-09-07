@@ -1,6 +1,7 @@
-Server\Controller\Main.class
-Server\PersonRepository.class
-Server\Model\Animal.class
-Client\ClientJersey.class
-Server\Controller\AnimalController.class
-Server\Model\Person.class
+com\jtm\twiservice\controller\AnimalController.class
+com\jtm\twiservice\model\Customer.class
+com\jtm\twiservice\model\Person.class
+com\jtm\twiservice\Main.class
+com\jtm\twiservice\controller\CustomerServerController.class
+com\jtm\twiservice\controller\CustomerClientController.class
+com\jtm\twiservice\model\Animal.class

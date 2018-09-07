@@ -1,10 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tajemnicza Wyspa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
-$END$
+    <div id="container">
+
+        <h1>Tajemnicza Wyspa Inżyniera - zapisy</h1>
+        <p><h2>Podaj dane dziecka</h2></p>
+        <form action="#" th:action="@{/customer}" th:object="${customer}" method="post">
+            <p class="text"><label >Imię dziecka:</label>  <input type="text" th:field="*{firstName}" /></p>
+            <p class="text"><label>Nazwisko dziecka:</label> <input type="text" th:field="*{lastName}" /></p>
+            <p class="text"><label>Rok urodzenia:</label> <select th:field="*{birthYears}">
+                <option th:value="'none'" th:text="--"></option>
+                <option th:value="'p2004'" th:text="przed_2004"></option>
+                <option th:value="'2004'" th:text="2004"></option>
+                <option th:value="'2005'" th:text="2005"></option>
+                <option th:value="'2006'" th:text="2006"></option>
+                <option th:value="'2007'" th:text="2007"></option>
+                <option th:value="'2008'" th:text="2008"></option>
+                <option th:value="'2009'" th:text="2009"></option>
+                <option th:value="'2010'" th:text="2010"></option>
+                <option th:value="'2011'" th:text="2011"></option>
+                <option th:value="'2012'" th:text="2012"></option>
+                <option th:value="'2013'" th:text="2013"></option>
+                <option th:value="'2014'" th:text="2014"></option>
+                <option th:value="'p2014'" th:text="po_2014"></option>
+            </select></p>
+            <p class="text"><label>Oddział klasy:</label> <input type="text" th:field="*{schoolForm}" /></p>
+
+            <p><h2>Podaj dane rodziców</h2></p>
+            <p>Adres email: <input type="text" th:field="*{email}" /></p>
+
+
+
+
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+        </form>
+
+    </div>
+
+
+
 </body>
 </html>

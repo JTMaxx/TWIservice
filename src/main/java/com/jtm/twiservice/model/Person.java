@@ -1,4 +1,4 @@
-package pl.kubson.twiservice.model;
+package com.jtm.twiservice.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

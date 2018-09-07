@@ -1,6 +1,6 @@
-package pl.kubson.twiservice.controller;
+package com.jtm.twiservice.controller;
 
-import pl.kubson.twiservice.model.Customer;
+import com.jtm.twiservice.model.Customer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

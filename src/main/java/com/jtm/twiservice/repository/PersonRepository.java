@@ -1,6 +1,6 @@
-// package pl.kubson.twiservice.repository;
+// package com.jtm.twiservice.repository;
 //
-//import pl.kubson.twiservice.model.Person;
+//import com.jtm.twiservice.model.Person;
 //import org.springframework.data.repository.PagingAndSortingRepository;
 //import org.springframework.data.repository.query.Param;
 //import org.springframework.data.rest.core.annotation.RepositoryRestResource;

@@ -1,4 +1,4 @@
-package pl.kubson.twiservice;
+package com.jtm.twiservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
