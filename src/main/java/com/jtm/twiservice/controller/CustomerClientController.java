@@ -1,11 +1,9 @@
-package Server.Controller;
+package pl.kubson.twiservice.controller;
 
-import Server.Model.Customer;
+import pl.kubson.twiservice.model.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.concurrent.atomic.AtomicLong;
 
 @Controller
 public class CustomerClientController {
@@ -21,11 +19,11 @@ public class CustomerClientController {
 
 
 // todo: Tell the difference between @RequestMapping and @GetMapping
-// @Controller
+// @controller
 // public class....
 //
 //    @GetMapping("/greeting")
-//    public String greetingForm(Model model) {
+//    public String greetingForm(model model) {
 //        model.addAttribute("greeting", new Greeting());
 //        return "greeting";
 

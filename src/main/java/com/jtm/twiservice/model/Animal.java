@@ -1,4 +1,4 @@
-package Server.Model;
+package pl.kubson.twiservice.model;
 
 public class Animal {
 
