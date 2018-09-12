@@ -5,23 +5,13 @@ import com.jtm.twiservice.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
-public class Application {
+public class Features {
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
-
-
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-
-    //todo: how to delay this to moment after submit form?
-    @Bean
-    public CommandLineRunner demo(CustomerRepository repository) {
+    //@Bean
+    public static CommandLineRunner demo(CustomerRepository repository) {
         return (args) -> {
             log.info("Customers found with findAll():");
             log.info("-------------------------------");
