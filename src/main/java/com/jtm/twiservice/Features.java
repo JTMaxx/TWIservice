@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 public class Features {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
-    //@Bean
+    @Bean
     public static CommandLineRunner demo(CustomerRepository repository) {
         return (args) -> {
             log.info("Customers found with findAll():");

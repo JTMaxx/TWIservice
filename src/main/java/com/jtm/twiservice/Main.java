@@ -10,24 +10,25 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class Application {
+public class Main {
 
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
-    //todo: how to delay this to moment after submit form?
+
     @Bean
-    public CommandLineRunner demo(CustomerRepository repository) {
+    public static CommandLineRunner demo2(CustomerRepository repository) {
         return (args) -> {
             log.info("Customers found with findAll():");
-            log.info("-------------------------------");
-            for (Customer customer : repository.findAll()) {
-                log.info(customer.toString());
-            }
+            log.info("----------------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------");
+
+//            for (Customer customer : repository.findAll()) {
+//                log.info(customer.toString());
+//            }
             log.info("");
         };
     }

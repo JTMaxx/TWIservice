@@ -1,7 +1,5 @@
-com\jtm\twiservice\controller\AnimalController.class
-com\jtm\twiservice\model\Customer.class
-com\jtm\twiservice\model\Person.class
-com\jtm\twiservice\Main.class
-com\jtm\twiservice\controller\CustomerServerController.class
 com\jtm\twiservice\controller\CustomerClientController.class
-com\jtm\twiservice\model\Animal.class
+com\jtm\twiservice\repository\CustomerRepository.class
+com\jtm\twiservice\model\Customer.class
+com\jtm\twiservice\Main.class
+com\jtm\twiservice\Features.class

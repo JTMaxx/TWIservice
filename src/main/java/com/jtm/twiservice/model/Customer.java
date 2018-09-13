@@ -1,40 +1,41 @@
 package com.jtm.twiservice.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Customer {
-    private long customerID;
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String schoolForm;
-    private List<String> birthYears = new ArrayList<>();
 
+    public Customer() {}
 
-    //todo: Do we neeed a constructor?
-    public Customer(long customerID, String firstName) {
-        this.customerID = customerID;
+    public Customer(String firstName, String lastName, String email, String schoolForm) {
         this.firstName = firstName;
-
-        //        birthYearList.add("po 2013");
-//        birthYearList.add("2013");
-//        birthYearList.add("2012");
-//        birthYearList.add("2011");
-//        birthYearList.add("2010");
-//        birthYearList.add("2009");
-//        birthYearList.add("2008");
-//        birthYearList.add("2007");
-//        birthYearList.add("2006");
-//        birthYearList.add("2005");
-//        birthYearList.add("2004");
-//        birthYearList.add("przed 2004");
+        this.lastName = lastName;
+        this.email = email;
+        this.schoolForm = schoolForm;
     }
 
-    public Customer() {
-        //todo: Do we need sth here?
+    @Override
+    public String toString() {
+        return String.format(
+                "Customer[id=%d, firstName='%s', lastName='%s', email='%s', schoolForm='%s']",
+                id, firstName, lastName, email, schoolForm);
+    }
 
+// end::sample[]
+
+    public Long getId() {
+        return id;
     }
 
     public String getFirstName() {
@@ -52,10 +53,5 @@ public class Customer {
     public String getSchoolForm() {
         return schoolForm;
     }
-
-    public List<String> getBirthYears() {
-        return birthYears;
-    }
-
-    //todo: Do we need setters?
 }
+
