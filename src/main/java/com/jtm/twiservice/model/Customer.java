@@ -7,7 +7,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Customer {
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
@@ -19,6 +18,7 @@ public class Customer {
     public Customer() {}
 
     public Customer(String firstName, String lastName, String email, String schoolForm) {
+//        this.id = id; //Is it needed? If yes, remember to add also extra parameter to this constructor
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -31,8 +31,6 @@ public class Customer {
                 "Customer[id=%d, firstName='%s', lastName='%s', email='%s', schoolForm='%s']",
                 id, firstName, lastName, email, schoolForm);
     }
-
-// end::sample[]
 
     public Long getId() {
         return id;
@@ -52,6 +50,26 @@ public class Customer {
 
     public String getSchoolForm() {
         return schoolForm;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSchoolForm(String schoolForm) {
+        this.schoolForm = schoolForm;
     }
 }
 

@@ -1,5 +1,4 @@
-com\jtm\twiservice\controller\CustomerClientController.class
-com\jtm\twiservice\repository\CustomerRepository.class
 com\jtm\twiservice\model\Customer.class
 com\jtm\twiservice\Main.class
-com\jtm\twiservice\Features.class
+com\jtm\twiservice\repository\CustomerRepository.class
+com\jtm\twiservice\controller\CustomerController.class
