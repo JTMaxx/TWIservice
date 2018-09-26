@@ -4,7 +4,7 @@
     <title>Tajemnicza Wyspa</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{css/style.css}"> <!-- path based on: https://www.javaworld.com/article/2078034/spring-framework/spring-framework-mastering-spring-mvc.html?page=2 -->
-    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"> &lt;!&ndash; path based on: https://www.javaworld.com/article/2078034/spring-framework/spring-framework-mastering-spring-mvc.html?page=2 &ndash;&gt;-->
 
 </head>
 <body>
@@ -16,6 +16,7 @@
             <form action="#" th:action="@{/customer}" th:object="${customer}" method="post">
                 <p class="text"><label >Imię dziecka:</label>  <input type="text" th:field="*{firstName}" /></p>
                 <p class="text"><label>Nazwisko dziecka:</label> <input type="text" th:field="*{lastName}" /></p>
+
                 <!--<p class="text"><label>Rok urodzenia:</label> <select th:field="*{birthYears}">-->
                     <!--<option th:value="'none'" th:text="&#45;&#45;"></option>-->
                     <!--<option th:value="'p2004'" th:text="przed_2004"></option>-->
@@ -32,24 +33,17 @@
                     <!--<option th:value="'2014'" th:text="2014"></option>-->
                     <!--<option th:value="'p2014'" th:text="po_2014"></option>-->
                 <!--</select></p>-->
+
                 <p class="text"><label>Oddział klasy:</label> <input type="text" th:field="*{schoolForm}" /></p>
 
                 <p><h2>Podaj dane rodziców</h2></p>
-                <div class="text">Adres email: <input type="text" th:field="*{email}" /></div>
-                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" />
-                <p><a class="btn btn-default" href="#" th:href="${'/customers'}">Results</a> </p>
-
+                <p class="text"><label>Adres e-mail:</label><input type="text" th:field="*{email}" /></p>
+                <p><input type="submit" value="Wyślij"/> </p>
+                <p><a href="#" th:href="${'/customers'}">Results</a> </p>
 
             </form>
 
         </div>
-
-
-
-
-
-
-
 
     </div>
 
