@@ -67,5 +67,26 @@ public class CustomerController {
         return birthYears;
     }
 
+    @ModelAttribute("schoolFormList")
+    public List<String> getSchoolFormList() {
+        List<String> schoolFormList = new ArrayList<String>();
+        schoolFormList.add("przed zerówką");
+        schoolFormList.add("0");
+        schoolFormList.add("1");
+        schoolFormList.add("2");
+        schoolFormList.add("3");
+        schoolFormList.add("4");
+        schoolFormList.add("5");
+        schoolFormList.add("6");
+        schoolFormList.add("7");
+        schoolFormList.add("8");
+        schoolFormList.add("3 gim");
+        schoolFormList.add("1 lic");
+        schoolFormList.add("2 lic");
+        schoolFormList.add("3 lic");
+        schoolFormList.add("powyżej");
+        return schoolFormList;
+    }
+
 }
 

@@ -17,17 +17,24 @@
                 <p class="text"><label >Imię dziecka:</label>  <input type="text" th:field="*{firstName}" /></p>
                 <p class="text"><label>Nazwisko dziecka:</label> <input type="text" th:field="*{lastName}" /></p>
 
-                <p class="text"> <label>Rok urodzenia:</label><select th:field="*{birthYear}">
-                    <!-- Maybe should be customer.birthYears below -->
-                    <option th:each="birthYear : ${birthYears}"
+                <p class="text"><label>Rok urodzenia:</label>
+                    <select th:field="*{birthYear}">
+                        <option th:each="birthYear : ${birthYears}"
                             th:value="${birthYear}"
                             th:text="${birthYear}">Wireframe</option>
-                    <!--Wg Thymeleaf docs powinno byc th:text="#{${'seedstarter.type.' + type}}">Wireframe</option>-->
-                    <!--Ale wtedy oprócz samej wartości wyswietlaja się '??' i 'seedstarter.type'-->
+                        <!--Wg thymeleaf docs linijka wyzej powinna byc jeszcze w #{...} i cos jeszcze, ale wtedy nie dziala prawidlowo-->
+                    </select> </p>
 
-                </select></p>
+                <p class="text"><label>Klasa:</label>
+                    <select th:field="*{schoolForm}">
+                        <option th:each="schoolForm : ${schoolFormList}"
+                                th:value="${schoolForm}"
+                                th:text="${schoolForm}">Wireframe</option>
+                        <!--Wg thymeleaf docs linijka wyzej powinna byc jeszcze w #{...} i cos jeszcze, ale wtedy nie dziala prawidlowo-->
+                    </select> </p>
 
-                <p class="text"><label>Oddział klasy:</label> <input type="text" th:field="*{schoolForm}" /></p>
+                <p class="text"><label>Oddział klasy:</label> <input type="text" th:field="*{schoolFormType}" /></p>
+                <p class="text"><label>Opis dziecka:</label> <input type="text" th:field="*{childDescription}" /></p>
                 <p><h2>Podaj dane rodziców</h2></p>
                 <p class="text"><label>Adres e-mail:</label><input type="text" th:field="*{email}" /></p>
                 <p><input type="submit" value="Wyślij"/> </p>

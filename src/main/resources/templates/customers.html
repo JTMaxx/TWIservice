@@ -16,7 +16,9 @@
                 <th>Nazwisko</th>
                 <th>Rok urodzenia</th>
                 <th>Klasa szkolna</th>
+                <th>Oddział klasy</th>
                 <th>Adres e-mail</th>
+                <th>Opis dziecka</th>
                 <!--<th>View</th>-->
                 <!--<th>Edit</th>-->
                 <!--<th>Delete</th>-->
@@ -27,7 +29,9 @@
                 <td th:text="${customer.lastName}">last name</td>
                 <td th:text="${customer.birthYear}">birth year</td>
                 <td th:text="${customer.schoolForm}">school form</td>
+                <td th:text="${customer.schoolFormType}">school form type</td>
                 <td th:text="${customer.email}">e-mail address</td>
+                <td th:text="${customer.childDescription}">Child description</td>
                 <!--<td><a class="btn btn-default" href="#" th:href="${'/customer/' + widget.id}">View</a> </td>-->
                 <!--<td><a class="btn btn-default" href="#" th:href="${'/widget/edit/' + widget.id}">Edit</a> </td>-->
                 <!--<td><a class="btn btn-default" href="#" th:href="${'/widget/delete/' + widget.id}">Delete</a> </td>-->
