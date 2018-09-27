@@ -51,11 +51,19 @@ public class CustomerController {
     @ModelAttribute("birthYears")
     public List<String> getBirthYears() {
         List<String> birthYears = new ArrayList<String>();
+        birthYears.add("przed 2004");
         birthYears.add("2004");
         birthYears.add("2005");
         birthYears.add("2006");
         birthYears.add("2007");
         birthYears.add("2008");
+        birthYears.add("2009");
+        birthYears.add("2010");
+        birthYears.add("2011");
+        birthYears.add("2012");
+        birthYears.add("2013");
+        birthYears.add("2014");
+        birthYears.add("po 2014");
         return birthYears;
     }
 
