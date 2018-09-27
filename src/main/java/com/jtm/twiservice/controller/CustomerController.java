@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -46,5 +47,17 @@ public class CustomerController {
                                                                             // w pierwszym argumentem w addAtribute() jest nazwa nowej zmiennej, a w drugim jej inicjalizacja
         return "customers";
     }
+
+    @ModelAttribute("birthYears")
+    public List<String> getBirthYears() {
+        List<String> birthYears = new ArrayList<String>();
+        birthYears.add("2004");
+        birthYears.add("2005");
+        birthYears.add("2006");
+        birthYears.add("2007");
+        birthYears.add("2008");
+        return birthYears;
+    }
+
 }
 

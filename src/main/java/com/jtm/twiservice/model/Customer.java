@@ -18,7 +18,6 @@ public class Customer {
     private String lastName;
     private String email;
     private String schoolForm;
-//    private List<String> birthYears = new ArrayList<>();
     private String birthYear;
 
     public Customer() {} //todo: Po co jest ten konstruktor?
@@ -30,6 +29,7 @@ public class Customer {
         this.email = email;
         this.schoolForm = schoolForm;
         this.birthYear = birthYear;
+
     }
 
     @Override
