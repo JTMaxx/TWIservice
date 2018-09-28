@@ -19,12 +19,13 @@
                 <th>Oddział klasy</th>
                 <th>Adres e-mail</th>
                 <th>Opis dziecka</th>
+                <th>Zapis pole testowe</th>
                 <!--<th>View</th>-->
                 <!--<th>Edit</th>-->
                 <!--<th>Delete</th>-->
             </tr>
             <tr th:each="customer : ${customers}"> <!--zwykla petla for ... each -->
-                <td th:text="${customer.id}">customer ID</td>
+                <td th:text="${customer.customerId}">customer ID</td>
                 <td th:text="${customer.firstName}">first name</td>
                 <td th:text="${customer.lastName}">last name</td>
                 <td th:text="${customer.birthYear}">birth year</td>
@@ -32,6 +33,7 @@
                 <td th:text="${customer.schoolFormType}">school form type</td>
                 <td th:text="${customer.email}">e-mail address</td>
                 <td th:text="${customer.childDescription}">Child description</td>
+                <td th:text="${customer.participationTest}">participation test</td>
                 <!--<td><a class="btn btn-default" href="#" th:href="${'/customer/' + widget.id}">View</a> </td>-->
                 <!--<td><a class="btn btn-default" href="#" th:href="${'/widget/edit/' + widget.id}">Edit</a> </td>-->
                 <!--<td><a class="btn btn-default" href="#" th:href="${'/widget/delete/' + widget.id}">Delete</a> </td>-->

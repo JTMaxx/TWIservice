@@ -8,9 +8,9 @@
 
 </head>
 <body>
-    <div id="container">
-        <div id="header"><h1>Tajemnicza Wyspa Inżyniera - zapisy</h1></div>
-        <div id="formContainer">
+    <div customerId="container">
+        <div customerId="header"><h1>Tajemnicza Wyspa Inżyniera - zapisy</h1></div>
+        <div customerId="formContainer">
 
             <p><h2>Podaj dane dziecka</h2></p>
             <form action="#" th:action="@{/customer}" th:object="${customer}" method="post">
@@ -37,6 +37,9 @@
                 <p class="text"><label>Opis dziecka:</label> <input type="text" th:field="*{childDescription}" /></p>
                 <p><h2>Podaj dane rodziców</h2></p>
                 <p class="text"><label>Adres e-mail:</label><input type="text" th:field="*{email}" /></p>
+
+                <p class="text>"></p><label>Participation test:</label><input type="text" th-field="*{participationTest}"/>
+
                 <p><input type="submit" value="Wyślij"/> </p>
                 <p><a href="#" th:href="${'/customers'}">Results</a> </p>
 
