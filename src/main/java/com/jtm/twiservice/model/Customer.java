@@ -5,7 +5,11 @@ import javax.persistence.*;
 
 @Entity
 @Table (name = "customer")
-@SecondaryTable(name ="participation")
+@SecondaryTable(name ="participation",
+    pkJoinColumns = {
+        @PrimaryKeyJoinColumn(name ="customerId"),
+        @PrimaryKeyJoinColumn(name = "participationId")})
+
 public class Customer {
 
     @Id
@@ -19,10 +23,11 @@ public class Customer {
     private String birthYear;
     private String childDescription;
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+//    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(table = "participation")
     private Long participationId;
+
+    @Column(table = "participation")
     private String participationTest;
 
 
@@ -39,6 +44,7 @@ public class Customer {
         this.birthYear = birthYear;
         this.childDescription = childDescription;
 
+        //this.participationId = participationId;
         this.participationTest = participationTest;
 
     }
@@ -111,7 +117,6 @@ public class Customer {
     }
 
     //PARTICIPATION TABLE
-
 
     public Long getParticipationId() {
         return participationId;
